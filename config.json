@@ -1,0 +1,31 @@
+{
+    "data_dir" : "data",
+    "dataset" : "all",
+    "subject" : "",
+    "train_frac" : 0.8,
+    "history_length" : 6,
+    "prediction_horizon" : 6,
+    "include_missing" : true,
+
+    "model" : "lstm_attention",
+    "nb_hidden_units" : 128,
+    "nb_layers" : 1,
+    "dropout" : 0.0,
+    "recurrent_dropout" : 0.0,
+    "nb_attention_units" : 64,
+
+    "batch_size" : 32,
+    "max_epochs" : 500,
+    "nb_runs" : 5,
+    "output_dir": "output",
+
+    "training_mode" : "early_stopping",
+    "patience" : 30,
+
+    "data_mean" : 158.288,
+    "data_stdev" : 60.565,
+    "model_fp" : "output/LSTMAttention_128_units_dropout=0.0_0.0_64_attention_units_1.pkl"
+}
+
+
+

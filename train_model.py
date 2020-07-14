@@ -9,9 +9,6 @@ import models
 from utils import RMSE
 from config import ConfigParser
 
-# REMOVE THIS
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-
 # validate input
 try:
     config_fp = sys.argv[1]
@@ -49,8 +46,7 @@ if config['model'] in ['gru', 'lstm', 'lstm_attention']:
 
 # load model
 if config['model'] == 'linear':
-    model = models.LinearModel(input_shape=(config['history_length'],), nb_output_units=1,
-                               nb_hidden_units=config['nb_hidden_units'])
+    model = models.LinearModel(input_shape=(config['history_length'],), nb_output_units=1)
 elif config['model'] == 'mlp':
     model = models.MLPModel(input_shape=(config['history_length'],), nb_output_units=1,
                             nb_hidden_units=config['nb_hidden_units'], nb_layers=config['nb_layers'])

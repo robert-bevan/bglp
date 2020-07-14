@@ -1,19 +1,17 @@
 from keras.models import Model
 from keras.layers import Dense, LSTM, GRU, Lambda, dot, concatenate, Activation, Input
 
-class LinearModel:
-    def __init__(self, input_shape=(6,), nb_output_units=1, nb_hidden_units=128):
+lass LinearModel:
+    def __init__(self, input_shape=(6,), nb_output_units=1):
         self.input_shape = input_shape
         self.nb_output_units = nb_output_units
-        self.nb_hidden_units = nb_hidden_units
 
     def __repr__(self):
-        return 'Linear_{0}_units'.format(self.nb_hidden_units)
+        return 'Linear'
 
     def build(self):
         i = Input(shape=self.input_shape)
-        x = Dense(self.nb_hidden_units, activation=None)(i)
-        x = Dense(self.nb_output_units, activation=None)(x)
+        x = Dense(self.nb_output_units, activation=None)(i)
 
         return Model(inputs=[i], outputs=[x])
 

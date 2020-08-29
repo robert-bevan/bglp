@@ -1,7 +1,7 @@
 from keras.models import Model
 from keras.layers import Dense, LSTM, GRU, Lambda, dot, concatenate, Activation, Input
 
-lass LinearModel:
+class LinearModel:
     def __init__(self, input_shape=(6,), nb_output_units=1):
         self.input_shape = input_shape
         self.nb_output_units = nb_output_units

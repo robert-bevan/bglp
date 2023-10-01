@@ -1,3 +1,13 @@
+<h1>Warning: RMSE scores reported in paper are incorrect</h1>
+
+See [Issue 1](https://github.com/robert-bevan/bglp/issues/1) - a bug in the implementation means RMSE scores are averaged across batches instead of being calculated for the full test set in one go. As a result the reported RMSE metrics are overly optimistic (i.e. lower than they should be). I plan to re-run the experiments and post the updated results here.
+
+
+
+
+
+
+<h3>About</h3>
 BGLP 2020 challenge code accompanying submission titled "Experiments in non-personalized future blood glucose level prediction" by Robert Bevan & Frans Coenen.
 
 <h3>Usage</h3>
